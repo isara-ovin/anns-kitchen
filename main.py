@@ -14,12 +14,12 @@ async def home(request: Request):
     data = {
         "page": "Home page"
     }
-    return templates.TemplateResponse("base.html", {"request": request, "data": data})
+    return templates.TemplateResponse("home.html", {"request": request, "data": data})
 
 
-@app.get("/page/{page_name}", response_class=HTMLResponse)
-async def page(request: Request, page_name: str):
+@app.get("/base", response_class=HTMLResponse)
+async def page(request: Request):
     data = {
         "page": page_name
     }
-    return templates.TemplateResponse("home.html", {"request": request, "data": data})
+    return templates.TemplateResponse("base.html", {"request": request, "data": data})

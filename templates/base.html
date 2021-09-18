@@ -35,6 +35,8 @@
 </head>
 
 <body>
+    {% block content %}
+    {% endblock %}
 
     {% include 'components/footer.html' %}
 
@@ -64,7 +66,7 @@
 
     {% endblock %}
 
-    { % extra_js % }
+    {% block extra_js %}
     {% endblock %}
 </body>
 
