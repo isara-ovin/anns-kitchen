@@ -1,0 +1,1 @@
+{"id":"b7237fd2-180e-4e80-9cf9-fef8f192a666","space":9877,"runtime":"python3.7","name":"anns_kitchen_v1","path":"guq2x9","project":"c01cmpty","account":"144798365827","region":"ap-southeast-1","deps":["fastapi","uvicorn","aiofiles","jinja2"],"envs":null,"public":true,"log_level":"debug","cron":""}
