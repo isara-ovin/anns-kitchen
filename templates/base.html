@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    {% set logo = url_for('static', path='img/logo.png') %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,31 +11,36 @@
     <link rel="icon" href="{{ url_for('static', path='img/favicon.ico') }}" type="image/png">
 
     {% block head %}
-
         <!-- Style sheets import -->
         {% include 'libs/style.html' %}
-
     {% endblock %}
 
+    <!-- Extra content to the header -->
     {% block extra_head%}
     {% endblock%}
 
 </head>
 
 <body>
+    <!-- Including header component -->
+    {% include 'components/header.html' %}
+    <!-- Including Banner component -->
+    {% include 'components/banner.html' %}
+
+    <!-- Body content goes here -->
     {% block content %}
     {% endblock %}
 
+    <!-- Including Footer component -->
     {% include 'components/footer.html' %}
 
-
+    <!-- External JS librarys  -->
     {% block scripts %}
-
         <!-- Scripts sheets import -->
         {% include 'libs/scripts.html' %}
-
     {% endblock %}
 
+    <!-- Custom JS scripts -->
     {% block extra_js %}
     {% endblock %}
 </body>
